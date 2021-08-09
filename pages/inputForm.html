@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input form fields</title>
+    <link rel="stylesheet" href="..//css/inputForm.css">
+</head>
+
+<body>
+    <header class="headerContainer">HTML 5 Form input Fields</header>
+    <form name="inputForm" action="#">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name">
+            <error-name class="error"></error-name>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password">
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email">
+        </div>
+        <div>
+            <label for="url">URL:</label>
+            <input type="url" name="url" id="url">
+        </div>
+        <div>
+            <label for="number">Number:</label>
+            <input type="number" name="number" id="number">
+        </div>
+        <div>
+            <label for="tel">Tel:</label>
+            <input type="tel" name="tel" id="tel">
+        </div>
+        <div>
+            <label for="search">Search:</label>
+            <input type="search" name="search" id="search">
+        </div>
+        <div>
+            <label for="dateAndTime">Date and Time:</label>
+            <input type="datetime-local" name="dateAndTime" id="dateAndTime">
+        </div>
+        <div>
+            <label for="salary">Salary:</label>
+            <input type="range" name="salary" id="salary" min="30000" max="50000" step="100" value="40000"
+                oninput="outputSalary.value=salary.value">
+            <output name="outputSalary" id="outputSalary">40000</output>
+        </div>
+        <div>
+            <button>Submit</button>
+        </div>
+    </form>
+    <script src="../js/inputForm.js"></script>
+</body>
+
+</html>

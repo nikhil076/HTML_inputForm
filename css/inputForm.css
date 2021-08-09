@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+}
+
+html, input{
+    font-family: sans-serif;
+}
+
+body{
+    width: 100%;
+    max-width: 600px;
+    margin: 0px auto;
+    padding: 2em;
+}
+
+.headerContainer{
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    background-color: tomato;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+div{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+label, input, button{
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+label{
+    text-align: right;
+    width: 30%;
+    margin-right: 2%;
+}
+
+input{
+    flex: auto;
+}
+
+button {
+    width: 70%;
+    margin: 0 auto;
+}
+
+#errorName, #errorEmail, #errorTelephone, #errorPassword{
+    margin-left: 5px;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: bold;
+    color: red;
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+    body{
+        background-color: lightgreen;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+    body{
+        background-color: lightskyblue;
+    }
+}
+
+@media (max-width: 767px){
+    body{
+        background-color: lightpink;
+    }
+}
