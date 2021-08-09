@@ -19,4 +19,14 @@
         else
             errorEmail.textContent = "Email is Incorrect!";
     });
+
+    const phone = document.querySelector('#tel');
+    const errorTelephone = document.querySelector('#errorTelephone');
+    phone.addEventListener('input', function () {
+        let phoneRegex = RegExp('^[\\d]{2}[\\s][\\d]{10}$');
+        if (phoneRegex.test(phone.value))
+            errorTelephone.textContent = "";
+        else
+            errorTelephone.textContent = "Telephone is Incorrect!";
+    });
 }
