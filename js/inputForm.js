@@ -2,7 +2,7 @@
     const name = document.querySelector('#name');
     const errorName = document.querySelector('#errorName');
     name.addEventListener('input', function () {
-        let nameRegex = RegExp('^[A-Z][a-z]{2,}$');
+        let nameRegex = RegExp('^[A-Z][A-Za-z]{2,}$');
         if (nameRegex.test(name.value))
             errorName.textContent = "";
         else
@@ -33,7 +33,7 @@
     const password = document.querySelector('#password');
     const errorPassword = document.querySelector('#errorPassword');
     password.addEventListener('input', function () {
-        let passwordRegex = RegExp('^[\\w]{8,}$');
+        let passwordRegex = RegExp('(?=\\S{8,})(?=\\S*[0-9])(?=\\S*[A-Z])[\\w]*[^\\w\\s][\\w]*');
         if (passwordRegex.test(password.value))
             errorPassword.textContent = "";
         else
