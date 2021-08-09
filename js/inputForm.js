@@ -17,7 +17,7 @@
         if (emailRegex.test(email.value))
             errorEmail.textContent = "";
         else
-            errorEmail.textContent = "Email is Incorrect!";
+            errorEmail.textContent = "Email is Invalid!";
     });
 
     const phone = document.querySelector('#tel');
@@ -27,6 +27,16 @@
         if (phoneRegex.test(phone.value))
             errorTelephone.textContent = "";
         else
-            errorTelephone.textContent = "Telephone is Incorrect!";
+            errorTelephone.textContent = "Telephone is Invalid!";
+    });
+
+    const password = document.querySelector('#password');
+    const errorPassword = document.querySelector('#errorPassword');
+    password.addEventListener('input', function () {
+        let passwordRegex = RegExp('^[\\w]{8,}$');
+        if (passwordRegex.test(password.value))
+            errorPassword.textContent = "";
+        else
+            errorPassword.textContent = "Password is Invalid!";
     });
 }
